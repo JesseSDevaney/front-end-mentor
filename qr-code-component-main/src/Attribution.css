@@ -1,0 +1,17 @@
+.attribution {
+  position: fixed;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-height: 620px) {
+  .attribution {
+    margin-top: 15px;
+    position: static;
+  }
+
+  .modal-wrapper {
+    position: static;
+  }
+}
