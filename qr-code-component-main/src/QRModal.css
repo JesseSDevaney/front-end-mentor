@@ -51,5 +51,7 @@
 @media screen and (max-height: 620px) {
   .modal-wrapper {
     position: static;
+    height: auto;
+    margin-top: 15px;
   }
 }
