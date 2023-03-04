@@ -4,9 +4,12 @@
   "type": "module",
   "scripts": {
     "build": "",
-    "deploy": ""
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "qr-code-component-main": "workspace:*"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
