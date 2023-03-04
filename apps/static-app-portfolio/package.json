@@ -6,5 +6,7 @@
     "build": "",
     "deploy": ""
   },
-  "dependencies": {}
+  "dependencies": {
+    "qr-code-component-main": "workspace:*"
+  }
 }
