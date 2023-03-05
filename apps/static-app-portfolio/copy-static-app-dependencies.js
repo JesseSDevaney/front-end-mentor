@@ -3,7 +3,6 @@ import path from "path";
 import chalk from "chalk";
 
 const currDir = path.resolve(path.dirname(""));
-const appDir = currDir.split(path.sep).slice(0, -1).join("/");
 
 try {
   const packageInput = fs.readFileSync("./package.json", "utf8");
@@ -24,15 +23,18 @@ try {
 }
 
 function copyProjectDist(project) {
+  const dependencyDir = "node_modules/";
+
   console.log(
     `${chalk.bold.red("| copying")}: (${chalk.bold.yellow(
       project
     )}/dist) -> (${chalk.bold.blue("static-app-portfolio")}/dist)`
   );
 
-  fs.copy(`${appDir}/${project}/dist`, `${currDir}/dist/${project}`).catch(
-    (err) => console.error(err)
-  );
+  fs.copy(
+    `${currDir}/${dependencyDir}/${project}/dist`,
+    `${currDir}/dist/${project}`
+  ).catch((err) => console.error(err));
 
   console.log(
     `${chalk.bold.green("|-> COMPLETED")}: copied (${chalk.bold.yellow(
