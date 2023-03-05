@@ -3,13 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "",
+    "build": "rm -rf dist/ && node copy-static-app-dependencies.js",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "qr-code-component-main": "workspace:*"
   },
   "devDependencies": {
+    "chalk": "^5.2.0",
+    "fs-extra": "^11.1.0",
     "gh-pages": "^5.0.0"
   }
 }
